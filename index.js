@@ -9,11 +9,7 @@ require("dotenv").config();
 // EXPRESS MIDDLEWARE
 const app = express();
 app.use(bodyParse.json());
-app.use(
-  cors({
-    origin: "https://axie-infinity-frontend.vercel.app/",
-  })
-);
+app.use(cors());
 
 // ROUTES AND CONTROLLERS
 const wallet_routes = require("./routes/wallet.routes");
