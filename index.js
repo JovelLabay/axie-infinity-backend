@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParse = require("body-parser");
+const cors = require("cors");
 
 // ENVIRONMENT VARIABLES
 require("dotenv").config();
@@ -8,6 +9,11 @@ require("dotenv").config();
 // EXPRESS MIDDLEWARE
 const app = express();
 app.use(bodyParse.json());
+app.use(
+  cors({
+    origin: "https://axie-infinity-frontend.vercel.app/",
+  })
+);
 
 // ROUTES AND CONTROLLERS
 const wallet_routes = require("./routes/wallet.routes");
