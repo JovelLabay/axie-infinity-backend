@@ -1,13 +1,8 @@
-const { yourWallet } = require("../models/schema");
-
 // LIST ALL THE WALLETS
-const get_wallets = async (req, res) => {
-  try {
-    const walletResults = await yourWallet.find();
-    res.send(walletResults);
-  } catch (error) {
-    res.send(error);
-  }
+const get_wallets = (req, res) => {
+  res.json({
+    sample: "Samle Text",
+  });
 };
 
 // EXPORTED MODULES
