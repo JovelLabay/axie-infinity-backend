@@ -15,7 +15,9 @@ const port = process.env.PORT || 5000;
 
 // DATABASE CONNECTION
 mongoose
-  .connect(process.env.MONGODB_STRING_CONNECTION)
+  .connect(
+    "mongodb+srv://limboHurry:Limbo12345@axie-infinity.cpfzf.mongodb.net/axie_infinity?retryWrites=true&w=majority"
+  )
   .then(() => {
     app.listen(port, () => {
       console.log(`The port is listening to ${port}`);
