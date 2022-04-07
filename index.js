@@ -11,6 +11,7 @@ app.use(bodyParse.json());
 
 // ROUTES AND CONTROLLERS
 const wallet_routes = require("./routes/wallet.routes");
+const auth_routes = require("./routes/auth.routes");
 
 // PORT
 const port = process.env.PORT || 5000;
@@ -28,4 +29,4 @@ mongoose
   });
 
 // ROUTES AND ENDPOINTS
-app.use(wallet_routes);
+app.use(wallet_routes, auth_routes);
