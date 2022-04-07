@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParse = require("body-parser");
 
 // ENVIRONMENT VARIABLES
 require("dotenv").config();
 
 // EXPRESS MIDDLEWARE
 const app = express();
+app.use(bodyParse.json());
 
 // ROUTES AND CONTROLLERS
 const wallet_routes = require("./routes/wallet.routes");
