@@ -19,6 +19,7 @@
     "mongoose": "^6.2.10"
   },
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^2.0.15"
   }
 }
